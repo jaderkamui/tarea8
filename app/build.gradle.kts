@@ -1,14 +1,14 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    compileSdk = 33
     namespace = "calc.jader_munoz_seccion8"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "calc.jader_seccion8"
+        applicationId = "calc.jader_munoz_seccion8"
         minSdk = 21
         targetSdk = 33
         versionCode = 1
@@ -31,7 +31,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0"
+        kotlinCompilerExtensionVersion = "1.5.1" // Version compatible con compose 1.4.0
     }
 }
 
@@ -43,6 +43,7 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.0.0")
     implementation("androidx.activity:activity-compose:1.7.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
     implementation("androidx.compose.ui:ui-tooling:1.4.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
     testImplementation("junit:junit:4.13.2")
